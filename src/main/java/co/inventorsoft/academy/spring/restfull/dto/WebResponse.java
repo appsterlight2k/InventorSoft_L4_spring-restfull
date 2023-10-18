@@ -11,4 +11,5 @@ public class WebResponse<T> {
     private T data;
     private String message;
     private boolean success;
+    private Integer count;
 }
