@@ -5,7 +5,7 @@ CREATE SCHEMA store;
 use store;
 
 CREATE TABLE items(
-	id INT UNIQUE NOT NULL , #AUTO_INCREMENT
+	id INT UNIQUE NOT NULL AUTO_INCREMENT,
 	name VARCHAR(500) NOT NULL,
     count INT NOT NULL,
     price DOUBLE NOT NULL,
@@ -37,7 +37,7 @@ INSERT INTO items(id, name, count, price, article_num, description)
 VALUES
 	(1, 'Colgate Medium Toothbrash', 300, 12.99, 'LT-1501-73', 'Colgate Medium Toothbrash, color white'),
     (2, 'Sword of the Jedi, blue ray', 5, 1500000.0, 'SJ-01B', 'Jedi laser sword, ray color: blue'),
-    (3, 'Sword of the Jedi, red ray', 5, 1490000.0, 'SJ-01R', 'Jedi laser sword, ray color: red'),
+    (3, 'Sword of the Jedi, red ray', 5, 1500000.0, 'SJ-01R', 'Jedi laser sword, ray color: red'),
     (4, 'Lenovo Legion 5 15ACH6H Dark Blue', 12, 2500.99, '82JU01C3RA',  'Lenovo Legion Gaming Series, Generation 5, CPU: Core i9-13430 3.2Ghz, Matrix: IPS 1920x1080, Video: 16Gb NVIDIA GeForce RTX 3070, RAM: 8GB, SSD: 1Gb');
 
 
