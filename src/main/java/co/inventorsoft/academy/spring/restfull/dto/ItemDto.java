@@ -7,7 +7,6 @@ import lombok.Setter;
 @Setter
 public class ItemDto {
     private Long id;
-
     private String name;
     private Integer count;
     private Double price;
