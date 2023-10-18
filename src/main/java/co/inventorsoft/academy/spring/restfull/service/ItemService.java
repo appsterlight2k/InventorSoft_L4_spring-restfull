@@ -29,12 +29,12 @@ public class ItemService {
         itemRepository.deleteById(id);
     }
 
-    public Item update(Item item) {
+    public Item save(Item item) {
         return itemRepository.save(item);
     }
 
-    public Item create(Item item) {
-        return itemRepository.save(item);
+    public List<Item> findAllByNameContains(String text) {
+        return itemRepository.findAllByNameContains(text);
     }
 
 }
