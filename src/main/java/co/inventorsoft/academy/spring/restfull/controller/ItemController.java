@@ -44,6 +44,7 @@ public class ItemController {
         return getWebResponseEntityForAll(items);
     }
 
+    //items?price=100
     @GetMapping(value = "/items",  params = "price")
     public ResponseEntity<WebResponse<List<ItemDto>>> getItemsByPrice(@RequestParam Double price) {
         List<Item> items = itemService.findAllByPrice(price);
@@ -64,8 +65,9 @@ public class ItemController {
         return new ResponseEntity<>(response, status);
     }
 
+    //items?name=Jedi
     @GetMapping(value = "/items", params = "name")
-    public ResponseEntity<WebResponse<List<ItemDto>>> findItemsByNameContains(@RequestParam String text) {
+    public ResponseEntity<WebResponse<List<ItemDto>>> findItemsByNameContains(@RequestParam("name") String text) {
         List<Item> items = itemService.findAllByNameContains(text);
 
         return getWebResponseEntityForAll(items);

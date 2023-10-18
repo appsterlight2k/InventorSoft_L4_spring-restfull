@@ -33,8 +33,8 @@ public class ItemService {
         return itemRepository.save(item);
     }
 
-    public List<Item> findAllByNameContains(String text) {
-        return itemRepository.findAllByNameContains(text);
+    public List<Item> findAllByNameContains(String name) {
+        return itemRepository.findAllByNameContains(name);
     }
 
 }
