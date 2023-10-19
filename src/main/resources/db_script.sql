@@ -1,4 +1,3 @@
-
 DROP SCHEMA IF EXISTS store;
 CREATE SCHEMA store;
 
@@ -10,7 +9,7 @@ CREATE TABLE items(
     count INT NOT NULL,
     price DOUBLE NOT NULL,
     article_num VARCHAR(100) NOT NULL,
-    description VARCHAR(5000) NOT NULL
+    description VARCHAR(5000)
 );
 
 CREATE TABLE orders(
