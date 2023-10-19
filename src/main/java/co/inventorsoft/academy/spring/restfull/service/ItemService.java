@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class ItemService {
+    private final ItemRepository itemRepository;
+
     @Autowired
-    private ItemRepository itemRepository;
+    public ItemService(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
+    }
 
     public List<Item> findAll() {
         return itemRepository.findAll();
